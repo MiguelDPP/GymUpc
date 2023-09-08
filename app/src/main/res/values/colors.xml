@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray_opacity">#00000066</color>
     <color name="black_min">#242424</color>
+    <color name="gray_bg_input">#636262</color>
+    <color name="gray_text_input">#A39D9D</color>
+    <color name="transparents">#ffffff00</color>
+    <color name="green">#00BC4A</color>
 </resources>

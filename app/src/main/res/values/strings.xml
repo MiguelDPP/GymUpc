@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">GymUpc</string>
     <string name="loading">Cargando...</string>
+
+<!--    Global-->
+    <string name="doc">Cedula</string>
+    <string name="pass">Contraseña</string>
+
+<!--    Login-->
+    <string name="text_foot_login">¡Aparta tu cupo en el Gym de la U!</string>
+    <string name="tittle_login">Login</string>
+    <string name="btn_login">Iniciar Sesion</string>
+    <string name="text_register">Registrarse</string>
 </resources>
