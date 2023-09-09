@@ -5,10 +5,29 @@
 <!--    Global-->
     <string name="doc">Cedula</string>
     <string name="pass">Contraseña</string>
+    <string name="back">Volver</string>
+    <string name="motivational_text_1">“La única forma de superar tus límites es desafiándolos.”</string>
+    <string name="save">Guardar</string>
 
 <!--    Login-->
     <string name="text_foot_login">¡Aparta tu cupo en el Gym de la U!</string>
     <string name="tittle_login">Login</string>
     <string name="btn_login">Iniciar Sesion</string>
     <string name="text_register">Registrarse</string>
+
+<!--    Register-->
+    <string name="tittle_register">Regístrate</string>
+
+<!--    Main Screen-->
+    <string name="aparta">Aparta tu lugar</string>
+    <string name="history">Historial</string>
+    <string name="profile">Perfil</string>
+    <string name="logout">Salir</string>
+
+<!--    Choose schedule-->
+    <string name="tittle_choose_schedule">Aparta tu lugar</string>
+    <string name="choose_to_work">Elige tu plan de entrenamiento</string>
+
+<!--    Profile-->
+    <string name="tittle_profile">Mi Perfil</string>
 </resources>
