@@ -30,4 +30,8 @@
 
 <!--    Profile-->
     <string name="tittle_profile">Mi Perfil</string>
+
+
+<!--    Hitory-->
+    <string name="tittle_history">Historial</string>
 </resources>
