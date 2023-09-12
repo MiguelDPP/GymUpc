@@ -1,6 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black_min">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@tools:sample/avatars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/title_detail_schedule"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_input"></androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_rounded_white"
+                android:drawableStart="@drawable/calendar_icon"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="5dp"
+                android:text="10 de Enero"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_rounded_white"
+                android:drawableStart="@drawable/clock_icon"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="5dp"
+                android:text="12:00 pm"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/plan_training"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_green_custom"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        android:tint="@color/white"
+                        tools:layout_margin="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_rounded_white"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        tools:layout_margin="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_rounded_white"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        tools:layout_margin="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_rounded_white"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        tools:layout_margin="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_green_custom"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        android:tint="@color/white"
+                        tools:layout_margin="10dp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="0.333"
+                        android:background="@drawable/bg_rounded_white"
+                        android:labelFor="@id/auto_complete_carrera"
+                        android:padding="5dp"
+                        android:src="@drawable/example_lg_icon"
+                        tools:layout_margin="10dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_primary"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="8dp"
+                android:text="@string/text_cancel_schedule"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_secondary"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="8dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

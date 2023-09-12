@@ -34,4 +34,9 @@
 
 <!--    Hitory-->
     <string name="tittle_history">Historial</string>
+
+    <!--Detail cupo-->
+    <string name="title_detail_schedule">Detalle de programación</string>
+    <string name="plan_training">Plan de entrenamiento</string>
+    <string name="text_cancel_schedule">Cancelar Programación</string>
 </resources>
