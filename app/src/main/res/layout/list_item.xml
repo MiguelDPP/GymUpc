@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
+    android:layout_height="48dp"
+    android:drawableEnd="@drawable/arrow_down"
+    android:drawableTint="@color/white"
     android:ellipsize="end"
+    android:fontFamily="@font/poppins_bold"
     android:maxLines="1"
-    android:textAppearance="?attr/textAppearanceSubtitle1">
+    android:padding="10dp"
+    android:textColor="@color/gray_text_input"
+    android:textSize="17sp">
 
 </TextView>

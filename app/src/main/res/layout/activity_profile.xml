@@ -11,7 +11,6 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:src="@tools:sample/avatars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -115,57 +114,47 @@
             android:textColor="@color/gray_text_input"
             android:textColorHint="@color/gray_text_input" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        <TextView
+            android:id="@+id/textCarrera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/carrera"
+            android:textColor="@color/gray_text_input"
+            android:textSize="16sp" />
 
-            >
-
-            <AutoCompleteTextView
-                android:id="@+id/auto_complete_carrera"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:drawableEnd="@drawable/arrow_down"
-                android:drawableTint="@color/gray_text_input"
-                android:fontFamily="@font/poppins_bold"
-                android:hint="Carrera"
-                android:inputType="none"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="Ingenieria de sistemas"
-                android:textColor="@color/gray_text_input"
-                android:textColorHint="@color/gray_text_input"
-                tools:background="@drawable/custom_input" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        <Spinner
+            android:id="@+id/dropCarreras"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:dropDownWidth="match_parent"
+            android:fontFamily="@font/poppins_bold"
+
+            android:foregroundTint="@color/gray_text_input" />
+
+
+        <TextView
+            android:id="@+id/textSemestre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/semestre"
+            android:textColor="@color/gray_text_input"
+            android:textSize="16sp" />
 
-            >
+        <Spinner
+            android:id="@+id/dropSemestres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_input"
+            android:dropDownWidth="match_parent"
+            android:fontFamily="@font/poppins_bold"
+            android:foregroundTint="@color/gray_text_input"
 
-            <AutoCompleteTextView
-                android:id="@+id/auto_complete_semestre"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:drawableEnd="@drawable/arrow_down"
-                android:drawableTint="@color/gray_text_input"
-                android:fontFamily="@font/poppins_bold"
-                android:hint="Semestre"
-                android:inputType="none"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="10"
-                android:textColor="@color/gray_text_input"
-                android:textColorHint="@color/gray_text_input"
-                tools:background="@drawable/custom_input" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            />
 
         <EditText
             android:id="@+id/txtPasswordProfile"
@@ -185,6 +174,23 @@
             android:text="holita123"
             android:textColor="@color/gray_text_input"
             android:textColorHint="@color/gray_text_input" />
+
+        <CheckBox
+            android:id="@+id/checkBoxShowPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:buttonTint="@color/green"
+            android:fontFamily="@font/poppins_bold"
+            android:foregroundTint="@color/white"
+            android:paddingLeft="5dp"
+            android:text="@string/show"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/green"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="16sp"
+            tools:textColorHint="@color/green" />
 
         <Button
             android:id="@+id/btnRegister"

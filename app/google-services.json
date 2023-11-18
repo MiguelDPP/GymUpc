@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "391109865175",
+    "firebase_url": "https://gymsoftcode-default-rtdb.firebaseio.com",
+    "project_id": "gymsoftcode",
+    "storage_bucket": "gymsoftcode.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391109865175:android:15f66fd4a6fdec1940ca92",
+        "android_client_info": {
+          "package_name": "com.softcode.gymupc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc1F-9Z6hmNUVMgbKgAi6wzzGGOjWKl40"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

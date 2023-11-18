@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:alpha="0.2"
         android:scaleType="centerCrop"
-        android:src="@tools:sample/avatars"
         app:srcCompat="@drawable/bg_1" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +41,6 @@
                 android:id="@+id/imageView5"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@tools:sample/avatars"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

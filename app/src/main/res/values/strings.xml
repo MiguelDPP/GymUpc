@@ -2,41 +2,61 @@
     <string name="app_name">GymUpc</string>
     <string name="loading">Cargando...</string>
 
-<!--    Global-->
+    <!--    Global-->
     <string name="doc">Cedula</string>
     <string name="pass">Contraseña</string>
     <string name="back">Volver</string>
     <string name="motivational_text_1">“La única forma de superar tus límites es desafiándolos.”</string>
     <string name="save">Guardar</string>
 
-<!--    Login-->
+    <!--    Login-->
     <string name="text_foot_login">¡Aparta tu cupo en el Gym de la U!</string>
     <string name="tittle_login">Login</string>
     <string name="btn_login">Iniciar Sesion</string>
     <string name="text_register">Registrarse</string>
 
-<!--    Register-->
+    <!--    Register-->
     <string name="tittle_register">Regístrate</string>
 
-<!--    Main Screen-->
+    <!--    Main Screen-->
     <string name="aparta">Aparta tu lugar</string>
     <string name="history">Historial</string>
     <string name="profile">Perfil</string>
     <string name="logout">Salir</string>
 
-<!--    Choose schedule-->
+    <!--    Choose schedule-->
     <string name="tittle_choose_schedule">Aparta tu lugar</string>
     <string name="choose_to_work">Elige tu plan de entrenamiento</string>
 
-<!--    Profile-->
+    <!--    Profile-->
     <string name="tittle_profile">Mi Perfil</string>
 
 
-<!--    Hitory-->
+    <!--    Hitory-->
     <string name="tittle_history">Historial</string>
 
     <!--Detail cupo-->
     <string name="title_detail_schedule">Detalle de programación</string>
     <string name="plan_training">Plan de entrenamiento</string>
     <string name="text_cancel_schedule">Cancelar Programación</string>
+    <string name="status">Estado</string>
+
+    <!-- Para el select -->
+    <string name="select">Seleciona una opcion</string>
+    <string name="carrera">Seleccione su carrera</string>
+    <string name="semestre">Seleccione su semestre</string>
+    <string name="horario">Seleccione su horario</string>
+
+    <string name="piernas">Piernas</string>
+    <string name="brazos">Brazos</string>
+    <string name="pecho">Pecho</string>
+    <string name="espalda">Espalda</string>
+    <string name="hombros">Hombros</string>
+    <string name="Abdomen">Abdomen</string>
+
+    <string name="show">Mostrar Contraseña</string>
+
+    <!--    Training-->
+    <string name="secction_training">Entrenamiento</string>
+    <string name="finish">Finalizar</string>
 </resources>

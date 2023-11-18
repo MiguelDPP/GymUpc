@@ -11,7 +11,6 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:src="@tools:sample/avatars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,7 +52,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/txtFecha"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
@@ -67,7 +66,7 @@
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/txtHora"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
@@ -108,90 +107,116 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
+                <CheckBox
+                    android:id="@+id/checkBoxPecho"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/pecho"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_green_custom"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        android:tint="@color/white"
-                        tools:layout_margin="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
-
-                </LinearLayout>
-
-                <LinearLayout
+                <CheckBox
+                    android:id="@+id/checkBoxEspalda"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/espalda"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
+                <CheckBox
+                    android:id="@+id/checkBoxBrazo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/brazos"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_green_custom"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        android:tint="@color/white"
-                        tools:layout_margin="10dp" />
+                <CheckBox
+                    android:id="@+id/checkBoxAbdomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/Abdomen"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
+                <CheckBox
+                    android:id="@+id/checkBoxHombros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/hombros"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
 
-                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/checkBoxPiernas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:fontFamily="@font/poppins_bold"
+                    android:foregroundTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="@string/piernas"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/green"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="20sp"
+                    tools:textColorHint="@color/green" />
+                tools:textColorHint="@color/green" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/status"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

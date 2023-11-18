@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black_min"
-        tools:context=".RegisterActivity">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <ImageView
             android:id="@+id/bg_image_register"
@@ -43,7 +48,6 @@
                     android:id="@+id/imageView"
                     android:layout_width="180dp"
                     android:layout_height="180dp"
-                    android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -95,12 +99,10 @@
                         android:layout_height="48dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/custom_input"
-                        android:capitalize="words"
                         android:drawableEnd="@drawable/user_icon"
                         android:drawableTint="@color/gray_text_input"
                         android:ems="10"
                         android:fontFamily="@font/poppins_bold"
-                        android:hapticFeedbackEnabled="true"
                         android:hint="Nombre"
                         android:inputType="text|textCapWords"
                         android:paddingStart="10dp"
@@ -126,47 +128,54 @@
                         android:textColor="@color/gray_text_input"
                         android:textColorHint="@color/gray_text_input" />
 
-                    <TextView
-                        android:id="@+id/textCarrera"
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="@string/carrera"
-                        android:textColor="@color/gray_text_input"
-                        android:textSize="16sp" />
 
-                    <Spinner
-                        android:id="@+id/dropCarreras"
+                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_complete_carrera"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:drawableEnd="@drawable/arrow_down"
+                            android:drawableTint="@color/gray_text_input"
+                            android:fontFamily="@font/poppins_bold"
+                            android:hint="Carrera"
+                            android:inputType="none"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/gray_text_input"
+                            android:textColorHint="@color/gray_text_input"
+                            tools:background="@drawable/custom_input" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/custom_input"
-                        android:dropDownWidth="match_parent"
-                        android:fontFamily="@font/poppins_bold"
-
-                        android:foregroundTint="@color/gray_text_input" />
-
-
-                    <TextView
-                        android:id="@+id/textSemestre"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="@string/semestre"
-                        android:textColor="@color/gray_text_input"
-                        android:textSize="16sp" />
 
-                    <Spinner
-                        android:id="@+id/dropSemestres"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/custom_input"
-                        android:dropDownWidth="match_parent"
-                        android:fontFamily="@font/poppins_bold"
-                        android:foregroundTint="@color/gray_text_input"
+                        >
 
-                        />
+                        <AutoCompleteTextView
+                            android:id="@+id/auto_complete_semestre"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:drawableEnd="@drawable/arrow_down"
+                            android:drawableTint="@color/gray_text_input"
+                            android:fontFamily="@font/poppins_bold"
+                            android:hint="Semestre"
+                            android:inputType="none"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="@color/gray_text_input"
+                            android:textColorHint="@color/gray_text_input"
+                            tools:background="@drawable/custom_input" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <EditText
                         android:id="@+id/txtPasswordRegister"
@@ -185,22 +194,6 @@
                         android:paddingEnd="10dp"
                         android:textColor="@color/gray_text_input"
                         android:textColorHint="@color/gray_text_input" />
-                    <CheckBox
-                        android:id="@+id/checkBoxShowPass"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:buttonTint="@color/green"
-                        android:fontFamily="@font/poppins_bold"
-                        android:foregroundTint="@color/white"
-                        android:paddingLeft="5dp"
-                        android:text="@string/show"
-                        android:textColor="@color/white"
-                        android:textColorHighlight="@color/green"
-                        android:textColorHint="@color/white"
-                        android:textColorLink="@color/white"
-                        android:textSize="16sp"
-                        tools:textColorHint="@color/green" />
 
                     <Button
                         android:id="@+id/btnRegister"
@@ -220,7 +213,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_marginBottom="10dp"
                         android:background="@drawable/button_secondary"
                         android:fontFamily="@font/poppins_bold"
                         android:padding="8dp"
@@ -232,8 +224,6 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
 
-
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

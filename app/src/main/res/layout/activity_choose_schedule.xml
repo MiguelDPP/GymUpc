@@ -11,255 +11,299 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:src="@tools:sample/avatars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/tittle_choose_schedule"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="@drawable/custom_input">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal">
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-            <Button
-                android:id="@+id/btnSelect1"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:background="@drawable/bg_rounded_white"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_bold"
-                android:text="Hoy"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:text="@string/tittle_choose_schedule"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/btnSelect4"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:background="@drawable/bg_rounded_white"
-                android:fontFamily="@font/poppins_bold"
-                android:text="29 ene"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/custom_input">
 
-            <Button
-                android:id="@+id/btnSelect5"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:background="@drawable/bg_rounded_white"
-                android:fontFamily="@font/poppins_bold"
-                android:text="30 ene"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/btnSelect6"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_margin="3dp"
-                android:layout_weight="0.25"
-                android:background="@drawable/bg_rounded_white"
-                android:fontFamily="@font/poppins_bold"
-                android:text="31 ene"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/txtHora"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/custom_input"
-            android:drawableEnd="@drawable/clock_icon"
-            android:drawableTint="@color/gray_text_input"
-            android:ems="10"
-            android:fontFamily="@font/poppins_bold"
-            android:hint="Intervalo de hora"
-            android:inputType="number"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:textColor="@color/gray_text_input"
-            android:textColorHint="@color/gray_text_input" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/choose_to_work"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnToday"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Hoy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
+                <Button
+                    android:id="@+id/btnTomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="29 ene"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
+                <Button
+                    android:id="@+id/btnAfterTomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="30 ene"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
+                <Button
+                    android:id="@+id/btnAfterAfterTomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/bg_rounded_white"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="31 ene"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="0.333"
-                        android:background="@drawable/bg_rounded_white"
-                        android:labelFor="@id/auto_complete_carrera"
-                        android:padding="5dp"
-                        android:src="@drawable/example_lg_icon"
-                        tools:layout_margin="10dp" />
-
-                </LinearLayout>
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/horario"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <Spinner
+                android:id="@+id/dropHoras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:dropDownWidth="match_parent"
+                android:fontFamily="@font/poppins_bold"
 
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/button_primary"
-            android:fontFamily="@font/poppins_bold"
-            android:padding="8dp"
-            android:text="@string/save"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+                android:foregroundTint="@color/gray_text_input" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/choose_to_work"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPecho"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/pecho"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxEspalda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/espalda"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBrazo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/brazos"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxAbdomen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/Abdomen"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxHombros"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/hombros"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxPiernas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/poppins_bold"
+                        android:foregroundTint="@color/white"
+                        android:paddingLeft="5dp"
+                        android:text="@string/piernas"
+                        android:textColor="@color/white"
+                        android:textColorHighlight="@color/green"
+                        android:textColorHint="@color/white"
+                        android:textColorLink="@color/white"
+                        android:textSize="20sp"
+                        tools:textColorHint="@color/green" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/btnBackToMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_secondary"
             android:fontFamily="@font/poppins_bold"
             android:padding="8dp"
             android:text="@string/back"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_primary"
+            android:fontFamily="@font/poppins_bold"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnBackToMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

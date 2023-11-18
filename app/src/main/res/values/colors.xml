@@ -13,4 +13,5 @@
     <color name="gray_text_input">#A39D9D</color>
     <color name="transparents">#ffffff00</color>
     <color name="green">#00BC4A</color>
+    <color name="holo_red_light">#ffff4444</color>
 </resources>
