@@ -1,223 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black_min">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        android:layout_height="match_parent"
+        android:background="@color/black_min">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/tittle_profile"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="@drawable/custom_input">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <EditText
-            android:id="@+id/txtCedula"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/custom_input"
-            android:drawableEnd="@drawable/number_icon"
-            android:drawableTint="@color/gray_text_input"
-            android:ems="10"
-            android:fontFamily="@font/poppins_bold"
-            android:hint="Cedula"
-            android:inputType="number"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="125500"
-            android:textColor="@color/gray_text_input"
-            android:textColorHint="@color/gray_text_input" />
-
-        <EditText
-            android:id="@+id/txtNombre"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custom_input"
-            android:drawableEnd="@drawable/user_icon"
-            android:drawableTint="@color/gray_text_input"
-            android:ems="10"
-            android:fontFamily="@font/poppins_bold"
-            android:hint="Nombre"
-            android:inputType="text|textCapWords"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="Miguel David Portillo"
-            android:textColor="@color/gray_text_input"
-            android:textColorHint="@color/gray_text_input" />
-
-        <EditText
-            android:id="@+id/txtCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custom_input"
-            android:drawableEnd="@drawable/email_icon"
-            android:drawableTint="@color/gray_text_input"
-            android:ems="10"
-            android:fontFamily="@font/poppins_bold"
-
-            android:hint="Correo"
-            android:inputType="textEmailAddress"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="mda@gmail.com"
-            android:textColor="@color/gray_text_input"
-            android:textColorHint="@color/gray_text_input" />
-
-        <TextView
-            android:id="@+id/textCarrera"
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/carrera"
-            android:textColor="@color/gray_text_input"
-            android:textSize="16sp" />
-
-        <Spinner
-            android:id="@+id/dropCarreras"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_input"
-            android:dropDownWidth="match_parent"
-            android:fontFamily="@font/poppins_bold"
-
-            android:foregroundTint="@color/gray_text_input" />
-
-
-        <TextView
-            android:id="@+id/textSemestre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/semestre"
-            android:textColor="@color/gray_text_input"
-            android:textSize="16sp" />
-
-        <Spinner
-            android:id="@+id/dropSemestres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_input"
-            android:dropDownWidth="match_parent"
-            android:fontFamily="@font/poppins_bold"
-            android:foregroundTint="@color/gray_text_input"
-
-            />
-
-        <EditText
-            android:id="@+id/txtPasswordProfile"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/custom_input"
-            android:drawableEnd="@drawable/lock_icon"
-            android:drawableTint="@color/gray_text_input"
-            android:ems="10"
-            android:fontFamily="@font/poppins_bold"
-
-            android:hint="@string/pass"
-            android:inputType="text|textPassword"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="holita123"
-            android:textColor="@color/gray_text_input"
-            android:textColorHint="@color/gray_text_input" />
-
-        <CheckBox
-            android:id="@+id/checkBoxShowPass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:buttonTint="@color/green"
-            android:fontFamily="@font/poppins_bold"
-            android:foregroundTint="@color/white"
-            android:paddingLeft="5dp"
-            android:text="@string/show"
-            android:textColor="@color/white"
-            android:textColorHighlight="@color/green"
-            android:textColorHint="@color/white"
-            android:textColorLink="@color/white"
-            android:textSize="16sp"
-            tools:textColorHint="@color/green" />
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_primary"
-            android:fontFamily="@font/poppins_bold"
-            android:padding="8dp"
-            android:text="@string/save"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/tittle_profile"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/custom_input">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button_secondary"
-            android:fontFamily="@font/poppins_bold"
-            android:padding="8dp"
-            android:text="@string/back"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/gray_text_input"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/carrera"
+                android:textColor="@color/gray_text_input"
+                android:textSize="16sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/txtCedula"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/number_icon"
+                android:drawableTint="@color/gray_text_input"
+                android:ems="10"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Cedula"
+                android:inputType="number"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="125500"
+                android:textColor="@color/gray_text_input"
+                android:textColorHint="@color/gray_text_input" />
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/user_icon"
+                android:drawableTint="@color/gray_text_input"
+                android:ems="10"
+                android:fontFamily="@font/poppins_bold"
+                android:hint="Nombre"
+                android:inputType="text|textCapWords"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Miguel David Portillo"
+                android:textColor="@color/gray_text_input"
+                android:textColorHint="@color/gray_text_input" />
+
+            <EditText
+                android:id="@+id/txtCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/email_icon"
+                android:drawableTint="@color/gray_text_input"
+                android:ems="10"
+                android:fontFamily="@font/poppins_bold"
+
+                android:hint="Correo"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="mda@gmail.com"
+                android:textColor="@color/gray_text_input"
+                android:textColorHint="@color/gray_text_input" />
+
+            <TextView
+                android:id="@+id/textCarrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/carrera"
+                android:textColor="@color/gray_text_input"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/dropCarreras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:dropDownWidth="match_parent"
+                android:fontFamily="@font/poppins_bold"
+
+                android:foregroundTint="@color/gray_text_input" />
+
+
+            <TextView
+                android:id="@+id/textSemestre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/semestre"
+                android:textColor="@color/gray_text_input"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/dropSemestres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:dropDownWidth="match_parent"
+                android:fontFamily="@font/poppins_bold"
+                android:foregroundTint="@color/gray_text_input"
+
+                />
+
+            <EditText
+                android:id="@+id/txtPasswordProfile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_input"
+                android:drawableEnd="@drawable/lock_icon"
+                android:drawableTint="@color/gray_text_input"
+                android:ems="10"
+                android:fontFamily="@font/poppins_bold"
+
+                android:hint="@string/pass"
+                android:inputType="text|textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="holita123"
+                android:textColor="@color/gray_text_input"
+                android:textColorHint="@color/gray_text_input" />
+
+            <CheckBox
+                android:id="@+id/checkBoxShowPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="@color/green"
+                android:fontFamily="@font/poppins_bold"
+                android:foregroundTint="@color/white"
+                android:paddingLeft="5dp"
+                android:text="@string/show"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/green"
+                android:textColorHint="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                tools:textColorHint="@color/green" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_primary"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="8dp"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_secondary"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="8dp"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -182,11 +182,30 @@ public class MainMenuActivity extends AppCompatActivity {
                                 if(training.size() > 0) {
                                     Training entrenamiento = training.get(0);
                                     if(entrenamiento.getCode().equals(codigo)) {
-                                        Database.findOnDataBase("users/"+Usuario.getUsuarioLogueado().getId()+"/schedules", "shortDate", new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+(new Date().getYear()+1900), Schedule.class)
+                                        Database.findOnDataBase("users/"+Usuario.getUsuarioLogueado().getId()+"/schedules", "date", new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+(new Date().getYear()+1900), Schedule.class)
                                                 .thenAccept((schedules)->{
                                                     if(schedules.size() > 0) {
                                                         Schedule schedule = schedules.get(0);
-                                                        Toast.makeText(this, "Cita agendada para hoy", Toast.LENGTH_SHORT).show();
+                                                        Date date = new Date();
+                                                        if(schedule.getHour().split(":")[0].equals(String.valueOf(date.getHours())) && schedule.isWent() == false) {
+                                                            schedule.setWent(true);
+                                                            Database.saveInformationDatabase("users/"+Usuario.getUsuarioLogueado().getId()+"/schedules", schedule, schedule.getId())
+                                                                    .thenAccept((result1)->{
+                                                                        if(result1) {
+                                                                            Toast.makeText(this, "Se ha registrado su asistencia", Toast.LENGTH_SHORT).show();
+                                                                            Intent intent = new Intent(MainMenuActivity.this, DetailScheduleActivity.class);
+                                                                            Bundle bundle = new Bundle();
+                                                                            bundle.putSerializable("schedule", schedule);
+                                                                            intent.putExtras(bundle);
+                                                                            MainMenuActivity.this.startActivity(intent);
+                                                                        }else {
+                                                                            Toast.makeText(this, "Error al registrar su asistencia", Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    });
+                                                        } else {
+                                                            Toast.makeText(this, "No tiene una cita agendada para hoy", Toast.LENGTH_SHORT).show();
+                                                        }
+
                                                     }else {
                                                         Toast.makeText(this, "No tiene una cita agendada para hoy", Toast.LENGTH_SHORT).show();
                                                     }

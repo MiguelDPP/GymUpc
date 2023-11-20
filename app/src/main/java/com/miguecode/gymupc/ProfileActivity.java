@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,6 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     ArrayAdapter<String> adapterItems;
     ArrayAdapter<String> adapterSemestres;
+    TextView textLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class ProfileActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPasswordProfile);
         btnRegister = findViewById(R.id.btnRegister);
         btnBack = findViewById(R.id.btnBack);
+        textLocation = findViewById(R.id.textLocation);
+
 
         showPassword = findViewById(R.id.checkBoxShowPass);
 
@@ -71,6 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
                     txtName.setText(user.getNombre());
                     txtEmail.setText(user.getCorreo());
                     txtPassword.setText(user.getPassword());
+                    textLocation.setText(""+user.getLocation().getCiudad()+" - "+user.getLocation().getDepartamento() + ", "+user.getLocation().getPais());
 
                     btnRegister.setOnClickListener((v)->{
                         if (checkFields()){

@@ -41,7 +41,7 @@ public class TrainingActivity extends AppCompatActivity {
 
         txtTime = findViewById(R.id.txtTime);
         txtInit = findViewById(R.id.txtInit);
-        txtInit.setText(training.getDateInit().getHours() + ":" + training.getDateInit().getMinutes() + ":" + training.getDateInit().getSeconds()+ (training.getDateInit().getHours() > 12 ? " PM" : " AM"));
+        txtInit.setText((training.getDateInit().getHours() < 12 ?training.getDateInit().getHours(): (training.getDateInit().getHours() - 12)) + ":" + training.getDateInit().getMinutes() + ":" + training.getDateInit().getSeconds()+ (training.getDateInit().getHours() > 12 ? " PM" : " AM"));
         //Crear un hilo para actualizar el tiempo
 
         new Thread(() -> {

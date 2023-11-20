@@ -19,9 +19,11 @@ public class Usuario implements java.io.Serializable {
 
     private String role;
 
+    private Location location;
+
     public Usuario() {
     }
-    public Usuario(String id, String cedula, String nombre, String correo, String carrera, String semestre, String password, String role) {
+    public Usuario(String id, String cedula, String nombre, String correo, String carrera, String semestre, String password, String role, Location location) {
         this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
@@ -30,8 +32,9 @@ public class Usuario implements java.io.Serializable {
         this.semestre = semestre;
         this.password = password;
         this.role = role;
+        this.location = location;
     }
-    public Usuario(String cedula, String nombre, String correo, String carrera, String semestre, String password, String role) {
+    public Usuario(String cedula, String nombre, String correo, String carrera, String semestre, String password, String role, Location location) {
         UUID uuid = UUID.randomUUID();
         this.id = uuid.toString();
         this.cedula = cedula;
@@ -41,6 +44,7 @@ public class Usuario implements java.io.Serializable {
         this.semestre = semestre;
         this.password = password;
         this.role = role;
+        this.location = location;
     }
 
 
@@ -115,5 +119,13 @@ public class Usuario implements java.io.Serializable {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
