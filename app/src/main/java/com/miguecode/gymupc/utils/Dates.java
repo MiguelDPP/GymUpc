@@ -85,6 +85,25 @@ public class Dates {
         return false;
     }
 
+    public static boolean esMayorConHoras(Date fecha1, Date fecha2) {
+        if (fecha1.getYear() > fecha2.getYear()) {
+            return true;
+        } else if (fecha1.getYear() == fecha2.getYear()) {
+            if (fecha1.getMonth() > fecha2.getMonth()) {
+                return true;
+            } else if (fecha1.getMonth() == fecha2.getMonth()) {
+                if (fecha1.getDate() > fecha2.getDate()) {
+                    return true;
+                } else if (fecha1.getDate() == fecha2.getDate()) {
+                    if (fecha1.getHours() > fecha2.getHours()) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     public static String toDateString(Date date) {
         return date.getDate() + "/" + (date.getMonth() + 1) + "/" + (date.getYear() + 1900);
     }

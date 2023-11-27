@@ -88,12 +88,14 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.schedule = localDataSet.get(position);
         Date date = Dates.convertTODate(viewHolder.schedule.getDate());
+        //cONVERTIR A Time una hora
+        date.setHours(Integer.parseInt(viewHolder.schedule.getHour().split(":")[0]));
         Date today = new Date();
-        if (Dates.isMayorQue(today, date) && viewHolder.schedule.isWent()) {
+        if (viewHolder.schedule.isWent()) {
             viewHolder.imageStatus.setImageResource(R.drawable.check_md_icon);
             //Cambiar color del icono
             viewHolder.imageStatus.setColorFilter(viewHolder.imageStatus.getContext().getResources().getColor(R.color.green));
-        } else if (Dates.isMayorQue(today, date) && !viewHolder.schedule.isWent()) {
+        } else if (Dates.esMayorConHoras(today, date) && !viewHolder.schedule.isWent()) {
             viewHolder.imageStatus.setImageResource(R.drawable.cancel_md_icon);
             //Cambiar color del icono a @android:color/holo_red_light
             viewHolder.imageStatus.setColorFilter(viewHolder.imageStatus.getContext().getResources().getColor(R.color.holo_red_light));
